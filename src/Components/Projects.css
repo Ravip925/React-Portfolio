@@ -1,0 +1,246 @@
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.3s all;
+}
+
+.top-box-1 {
+    width: 50%;
+    height: 25vh;
+    margin-left: -50%;
+
+}
+
+.top-box-2 {
+    width: 50%;
+    height: 25vh;
+    display: flex;
+    margin-right: -50%;
+}
+
+.react_img{
+    position: absolute;
+    top: 30%;
+    left: 41%;
+}
+#js_img{
+    
+    animation: js 3s linear infinite alternate;
+}
+@keyframes js {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1.4);
+    }
+}
+.bottom-box-1 {
+    width: 41%;
+    height: 25vh;
+    position: absolute;
+    top: 8%;
+    left: 55%;
+
+}
+
+.bottom-box-2 {
+    width: 41%;
+    height: 25vh;
+    position: absolute;
+    top: 8%;
+    right: 4%;
+}
+
+.bottom-box-3 {
+    width: 45%;
+    height: 23vh;
+    position: absolute;
+    top: 55%;
+}
+
+.text{
+    position: relative;
+}
+.text h4{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 60px;
+    opacity: 0;
+    transition: 0.3s all;
+}
+.card-body:hover h4{
+    opacity: 1;
+}
+.card-body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.3s ease-in;
+    animation: flip 5s linear infinite alternate 2s;
+    cursor: pointer;
+}
+.box:hover{
+    transform: translateY(-5px);
+}
+.front {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    color: aliceblue;
+    border-radius: 10px;
+
+}
+
+.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    color: aliceblue;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+}
+
+.top1-front {
+    background: url('https://i.ibb.co/xYRfBsr/Ecommerce1-ravi.jpg') no-repeat center center/ cover;
+}
+
+.top1-front:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.ibb.co/xYRfBsr/Ecommerce1-ravi.jpg');
+}
+
+.top1-back {
+    background: url('https://i.ibb.co/R0pc4mb/Ecommerce2-ravi.jpg') no-repeat center center/ cover;
+}
+
+.top1-back:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.ibb.co/R0pc4mb/Ecommerce2-ravi.jpg');
+}
+
+.top2-front {
+    background: url('https://i.ibb.co/znd4mtk/Books1-ravi.jpg') no-repeat center center/ cover;
+}
+
+.top2-front:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.ibb.co/znd4mtk/Books1-ravi.jpg');
+}
+
+.top2-back {
+    background: url('https://i.ibb.co/0chbRJs/Books2.jpg') no-repeat center center/ cover;
+}
+
+.top2-back:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.ibb.co/0chbRJs/Books2.jpg');
+}
+
+.middle1-front {
+    background: url('https://i.ibb.co/SR52Lyp/blog4.jpg') no-repeat center center/ cover;
+}
+
+.middle1-front:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.ibb.co/SR52Lyp/blog4.jpg');
+}
+
+.middle1-back {
+    background: url('https://i.ibb.co/7bF5RdJ/blog3.jpg') no-repeat center center/ cover;
+}
+
+.middle1-back:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.ibb.co/7bF5RdJ/blog3.jpg');
+}
+
+.middle2-front {
+    background: url('https://i.ibb.co/Z8FgXB0/Blog2-ravi.jpg') no-repeat center center/ cover;
+}
+
+.middle2-front:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.ibb.co/Z8FgXB0/Blog2-ravi.jpg');
+}
+
+.middle2-back {
+    background: url('https://i.ibb.co/kB7wwyh/Blog1-ravi.jpg') no-repeat center center/ cover;
+}
+
+.middle2-back:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.ibb.co/kB7wwyh/Blog1-ravi.jpg');
+}
+
+.bottom1-front {
+    background: url('https://i.ibb.co/6Nx4pLf/Digitalclock1-ravi.jpg') no-repeat center center/ cover;
+}
+
+.bottom1-front:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.ibb.co/6Nx4pLf/Digitalclock1-ravi.jpg');
+}
+
+.bottom1-back {
+    background: url('https://i.ibb.co/3zPLs9p/digitalclock2-ravi.jpg') no-repeat center center/ cover;
+}
+
+.bottom1-back:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.ibb.co/3zPLs9p/digitalclock2-ravi.jpg');
+}
+
+.bottom2-front {
+    background: url('https://i.ibb.co/k8qw7XQ/Todo1-ravi.jpg') no-repeat center center/ cover;
+}
+
+.bottom2-front:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.ibb.co/k8qw7XQ/Todo1-ravi.jpg');
+}
+
+.bottom2-back {
+    background: url('https://i.ibb.co/ts8TFcW/Todo2-ravi.jpg') no-repeat center center/ cover;
+}
+
+.bottom2-back:hover {
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.ibb.co/ts8TFcW/Todo2-ravi.jpg');
+}
+
+.bottom3-front {
+    background: url('https://i.ibb.co/6RX74VC/Portfolio1-ravi.jpg') no-repeat center center/ cover;
+    background-size: cover;
+}
+
+.bottom3-front:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.ibb.co/6RX74VC/Portfolio1-ravi.jpg');
+}
+
+.bottom3-back {
+    background: url('https://i.ibb.co/YXK1bX1/Portfolio2-ravi.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.bottom3-back:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i.ibb.co/YXK1bX1/Portfolio2-ravi.jpg');
+}
+
+@keyframes flip {
+    from {
+        transform: rotateY(360deg);
+    }
+
+    40% {
+        transform: rotateY(360deg);
+    }
+
+    60% {
+        transform: rotateY(180deg);
+    }
+
+    to {
+        transform: rotateY(180deg);
+    }
+}
