@@ -1,5 +1,6 @@
 import { useLayoutEffect } from "react";
 import styled from "styled-components";
+import { mobile } from "../Responsive";
 
 const AboutWrapper = styled.section`
   height: 100vh;
@@ -7,6 +8,7 @@ const AboutWrapper = styled.section`
   grid-template-rows: 1fr;
   font-family: "Raleway", sans-serif;
   background-color: #01e37f;
+  ${mobile({ overflow: "hidden", height: "130vh", backgroundColor: "white" })}
 `;
 const Wrapper = styled.section`
   display: grid;
@@ -18,6 +20,12 @@ const Wrapper = styled.section`
   border-radius: 5px;
   height: 87vh;
   width: 70%;
+  ${mobile({
+    overflow: "hidden",
+    height: "130vh",
+    padding: "1rem",
+    borderRadius: "none",
+  })}
 
   img {
     max-width: 100%;
@@ -32,6 +40,7 @@ const Wrapper = styled.section`
   }
   .product__photo {
     position: relative;
+    ${mobile({ display: "none" })}
   }
 
   .photo-container {
@@ -84,6 +93,7 @@ const Wrapper = styled.section`
       font-family: "Montserrat";
       text-transform: none;
       text-transform: uppercase;
+      ${mobile({ marginLeft: "1.5rem" })}
     }
   }
 
@@ -93,7 +103,9 @@ const Wrapper = styled.section`
     line-height: 25px;
     white-space: pre-line;
     font-family: "roboto mono", sans-serif;
-    overflow-wrap: break-word h3 {
+    overflow-wrap: break-word;
+    ${mobile({ margin: "2rem 1.5rem", width: "100%" })}
+    h3 {
       margin-bottom: 1em;
     }
   }
@@ -109,10 +121,7 @@ const About = () => {
         <div className="product__photo">
           <div className="photo-container">
             <div className="photo-main">
-              <img
-                src="https://i.ibb.co/mN4Z4cq/mern.png"
-                alt="cover"
-              />
+              <img src="https://i.ibb.co/mN4Z4cq/mern.png" alt="cover" />
               <img
                 className="react_png"
                 src="https://i.ibb.co/wL1B7YK/react.png"

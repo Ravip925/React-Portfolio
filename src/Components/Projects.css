@@ -20,26 +20,31 @@
     margin-right: -50%;
 }
 
-.react_img{
+.react_img {
     position: absolute;
     top: 30%;
     left: 41%;
 }
-#js_img{
-    
+
+#js_img {
+
     animation: js 3s linear infinite alternate;
 }
+
 @keyframes js {
-    0%{
+    0% {
         transform: scale(1);
     }
-    50%{
+
+    50% {
         transform: scale(1.2);
     }
-    100%{
+
+    100% {
         transform: scale(1.4);
     }
 }
+
 .bottom-box-1 {
     width: 41%;
     height: 25vh;
@@ -64,10 +69,11 @@
     top: 55%;
 }
 
-.text{
+.text {
     position: relative;
 }
-.text h4{
+
+.text h4 {
     width: 100%;
     overflow: hidden;
     text-align: center;
@@ -77,9 +83,11 @@
     opacity: 0;
     transition: 0.3s all;
 }
-.card-body:hover h4{
+
+.card-body:hover h4 {
     opacity: 1;
 }
+
 .card-body {
     position: absolute;
     width: 100%;
@@ -89,9 +97,11 @@
     animation: flip 5s linear infinite alternate 2s;
     cursor: pointer;
 }
-.box:hover{
+
+.box:hover {
     transform: translateY(-5px);
 }
+
 .front {
     position: absolute;
     height: 100%;
@@ -242,5 +252,34 @@
 
     to {
         transform: rotateY(180deg);
+    }
+}
+
+@media screen and (max-width:425px) {
+    .top-box-1 {
+        width: 70%;
+        height: 20vh;
+        margin-left: -30%;
+    }
+
+    .top-box-2 {
+        width: 70%;
+        height: 20vh;
+        margin-right: -30%;
+    }
+
+    .bottom-box-2 {
+        width: 41%;
+        height: 25vh;
+        position: absolute;
+        top: 8%;
+        right: 4%;
+    }
+
+    .bottom-box-3 {
+        width: 75%;
+        height: 21vh;
+        position: absolute;
+        top: 53%;
     }
 }

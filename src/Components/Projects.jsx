@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile } from "../Responsive";
 import "./Projects.css";
 
 const Container = styled.div`
@@ -11,26 +12,27 @@ const Container = styled.div`
   justify-content: space-evenly;
   align-items: center;
   background: #71d0f9;
+  ${mobile({
+    height: "205vh",
+  })}
 
-  .H2{
+  .H2 {
     margin-top: -5%;
     color: white;
     font-size: 3rem;
     font-weight: bold;
-    text-shadow: 0px 0px 0 rgb(245,245,245),
-                 1px 0px 0 rgb(235,235,235),
-                 2px 0px 0 rgb(224,224,224),
-                 3px 0px 0 rgb(214,214,214),
-                 4px 0px 0 rgb(204,204,204),
-                 5px 0px 0 rgb(194,194,194),
-                 6px 0px 0 rgb(184,184,184),
-                 7px 0px 0 rgb(173,173,173),
-                 8px 0px 0 rgb(163,163,163),
-                 9px 0px 0 rgb(153,153,153),
-                 10px 0px  0 rgb(143,143,143),
-                 11px 0px 10px rgba(0,0,0,0.42),
-                 11px 0px 1px rgba(0,0,0,0.5),
-                 0px 0px 10px rgba(0,0,0,.2);
+    text-shadow: 0px 0px 0 rgb(245, 245, 245), 1px 0px 0 rgb(235, 235, 235),
+      2px 0px 0 rgb(224, 224, 224), 3px 0px 0 rgb(214, 214, 214),
+      4px 0px 0 rgb(204, 204, 204), 5px 0px 0 rgb(194, 194, 194),
+      6px 0px 0 rgb(184, 184, 184), 7px 0px 0 rgb(173, 173, 173),
+      8px 0px 0 rgb(163, 163, 163), 9px 0px 0 rgb(153, 153, 153),
+      10px 0px 0 rgb(143, 143, 143), 11px 0px 10px rgba(0, 0, 0, 0.42),
+      11px 0px 1px rgba(0, 0, 0, 0.5), 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+    ${mobile({
+      fontSize: "2rem",
+      marginTop: "-10%",
+    })}
   }
 `;
 const ProjectsWrapper = styled.div`
@@ -41,8 +43,11 @@ const ProjectsWrapper = styled.div`
   height: auto;
   background: #71d0f9;
   border-radius: 20px;
-  box-shadow:  19px 19px 37px #2d5364,
-             -19px -19px 37px #b5ffff;
+  box-shadow: 19px 19px 37px #2d5364, -19px -19px 37px #b5ffff;
+
+  ${mobile({
+    width: "100%",
+  })}
 `;
 const ProjectsBoxes = styled.div`
   display: flex;
@@ -92,6 +97,9 @@ const Left = styled.div`
   position: relative;
   transition: 0.3s all;
   overflow: hidden;
+  ${mobile({
+    display: "none",
+  })}
 
   img {
     width: 60%;
@@ -143,7 +151,10 @@ const Projects = () => {
               <h2>MERN Stack</h2>
             </Left>
             <Right>
-              <div className="box top-box-1">
+              <a
+                href="https://e-commerce-ravi.netlify.app/"
+                className="box top-box-1"
+              >
                 <div class="card-body" style={{ animationDelay: "0.5s" }}>
                   <div class="front top1-front">
                     <div class="text">
@@ -156,8 +167,11 @@ const Projects = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="box top-box-2">
+              </a>
+              <a
+                href="https://bookstore-crud.netlify.app/"
+                className="box top-box-2"
+              >
                 <div class="card-body">
                   <div class="front top2-front">
                     <div class="text">
@@ -170,12 +184,15 @@ const Projects = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </Right>
           </Top>
           <Middle>
             <Right>
-              <div className="box top-box-1">
+              <a
+                href="https://react-blog-app-ravi.netlify.app/"
+                className="box top-box-1"
+              >
                 <div class="card-body" style={{ animationDelay: "0.1s" }}>
                   <div class="front middle1-front">
                     <div class="text">
@@ -188,21 +205,24 @@ const Projects = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="box top-box-2">
+              </a>
+              <a
+                href="https://blog-app-backend-ravi.netlify.app/"
+                className="box top-box-2"
+              >
                 <div class="card-body" style={{ animationDelay: "2.5s" }}>
                   <div class="front middle2-front">
                     <div class="text">
-                      <h4>Blog</h4>
+                      <h4>Blog MERN App</h4>
                     </div>
                   </div>
                   <div class="back middle2-back">
                     <div class="text">
-                      <h4>Blog</h4>
+                      <h4>Blog MERN App</h4>
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </Right>
             <Left>
               <img src="https://i.ibb.co/VVGxQK8/reactjs.png" alt="cover" />
@@ -211,11 +231,16 @@ const Projects = () => {
           </Middle>
           <Bottom>
             <Left>
-              <img id="js_img" src="https://i.ibb.co/7XvfQqB/js.png" alt="cover" />
+              <img
+                id="js_img"
+                src="https://i.ibb.co/7XvfQqB/js.png"
+                alt="cover"
+              />
               <h2>JavaScript</h2>
             </Left>
             <Right style={{ flex: 1.5 }}>
-              <div
+              <a
+                href="https://ravip925.github.io/PrepByte-Projects/JavaScript_Projects/Digital%20Clock/index.html"
                 className="box bottom-box-1"
                 style={{ width: "45%", marginLeft: "-50%" }}
               >
@@ -231,8 +256,11 @@ const Projects = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="box bottom-box-2">
+              </a>
+              <a
+                href="https://ravip925.github.io/PrepByte-Projects/JavaScript_Projects/ToDo%20List%20JS/index.html"
+                className="box bottom-box-2"
+              >
                 <div class="card-body" style={{ animationDelay: "0.7s" }}>
                   <div class="front bottom2-front">
                     <div class="text">
@@ -245,8 +273,11 @@ const Projects = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="box bottom-box-3">
+              </a>
+              <a
+                href="https://portfolio-ravipatil.netlify.app/"
+                className="box bottom-box-3"
+              >
                 <div class="card-body" style={{ animationDelay: "1.6s" }}>
                   <div class="front bottom3-front">
                     <div class="text">
@@ -259,7 +290,7 @@ const Projects = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </Right>
           </Bottom>
         </ProjectsBoxes>

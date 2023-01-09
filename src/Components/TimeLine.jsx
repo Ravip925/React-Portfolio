@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { mobile } from "../Responsive";
 import "./TimeLine.css";
 const Container = styled.div`
   width: 100%;
@@ -8,6 +9,7 @@ const Container = styled.div`
   justify-content: center;
   box-sizing: border-box;
   align-items: center;
+  overflow: hidden;
   background: linear-gradient(135deg, #000111 0%, #000000 100%);
 `;
 
@@ -18,11 +20,13 @@ const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  ${mobile({ width: "90%", margin: "15px" })}
 `;
 const Title = styled.h3`
   margin: 30px 0px 0 20px;
   color: aliceblue;
   text-align: center;
+  ${mobile({ margin: "10px 10px" })}
 `;
 
 const Wrapper = styled.div`
@@ -36,6 +40,7 @@ const Wrapper = styled.div`
   align-items: center;
   gap: 20px;
   position: relative;
+  ${mobile({ paddingTop: "30%" })}
 `;
 const Left = styled.div`
   margin-top: -240px;
@@ -45,6 +50,7 @@ const Left = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  ${mobile({ marginRight: "-10%", marginBottom: "25vh" })}
 `;
 const Right = styled.div`
   margin-top: 280px;
@@ -54,6 +60,7 @@ const Right = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  ${mobile({ marginLeft: "-95%" })}
 `;
 const Items = styled.div``;
 
@@ -65,6 +72,7 @@ const ButtonContainer = styled.div`
 const Img = styled.img`
   position: absolute;
   width: 11vw;
+  ${mobile({ display: "none" })}
 `;
 const ImgIcon = styled.img`
   width: 55px;

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Bar from "./Bar";
 import "../index.scss";
 import { NavLink } from "react-router-dom";
+import { mobile } from "../Responsive";
 
 const Container = styled.div`
   width: 100%;
@@ -19,6 +20,10 @@ const NavbarWrapper = styled.nav`
   position: relative;
   z-index: 1;
   overflow: hidden;
+  ${mobile({
+    padding: "1rem 1rem",
+  })}
+
   h2 {
     position: relative;
     z-index: 3;
@@ -30,6 +35,10 @@ const NavbarWrapper = styled.nav`
     text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     text-transform: uppercase;
     letter-spacing: 5px;
+    ${mobile({
+      fontSize: "1.1rem",
+      letterSpacing: "0",
+    })}
   }
 `;
 
@@ -41,7 +50,7 @@ const Navbar = () => {
           <NavLink to="/">My Portfolio</NavLink>
         </h2>
         <div className="request-loader">
-          <Bar/>
+          <Bar />
         </div>
       </NavbarWrapper>
     </Container>

@@ -26,6 +26,7 @@
   position: absolute;
   transition: all .3s;
 }
+
 .bar::before {
   transform: translateY(-9px);
 }
@@ -134,6 +135,7 @@ ul {
   box-shadow: 0 0px 80px rgba(4, 26, 62, 0.5);
   visibility: visible;
 }
+
 .nav.visible li:nth-child(4) {
   width: 65vw;
   height: 65vw;
@@ -172,6 +174,7 @@ ul {
   text-indent: 14vw !important;
 
 }
+
 .nav.visible li:nth-child(4) a {
   line-height: 90vw !important;
   text-indent: 10vw !important;
@@ -232,5 +235,92 @@ ul {
   h1 {
     padding-top: 80px;
     font-size: 60px;
+  }
+
+  .bar {
+    height: 3px;
+  }
+
+  .bar::before,
+  .bar::after {
+    height: 3px;
+  }
+}
+
+@media screen and (max-width:425px) {
+  .bar {
+    height: 3px;
+  }
+
+  .bar::before,
+  .bar::after {
+    height: 3px;
+  }
+
+  .shape-circle {
+    font-size: 15px;
+  }
+
+  .nav.visible li:first-child {
+    width: 250vw;
+    height: 250vw;
+    top: -110vw;
+    right: -110vw;
+  }
+
+  .nav.visible li:nth-child(2) {
+    width: 195vw;
+    height: 195vw;
+    top: -85vw;
+    right: -85vw;
+  }
+
+  .nav.visible li:nth-child(3) {
+    width: 150vw;
+    height: 150vw;
+    top: -68vw;
+    right: -68vw;
+  }
+
+  .nav.visible li:nth-child(4) {
+    width: 105vw;
+    height: 105vw;
+    top: -50vw;
+    right: -50vw;
+  }
+
+  .nav.visible li:last-child {
+    width: 60vw;
+    height: 60vw;
+    top: -30vw;
+    right: -30vw;
+  }
+
+  .nav.visible li:first-child a {
+    line-height: 425vw !important;
+    text-indent: 51vw !important;
+
+  }
+
+  .nav.visible li:nth-child(2) a {
+    line-height: 330vw !important;
+    text-indent: 40vw !important;
+  }
+
+  .nav.visible li:nth-child(3) a {
+    line-height: 250vw !important;
+    text-indent: 29vw !important;
+
+  }
+
+  .nav.visible li:nth-child(4) a {
+    line-height: 165vw !important;
+    text-indent: 18vw !important;
+
+  }
+
+  .nav.visible li:last-child a {
+    line-height: 0vw !important;
+    text-indent: -0vw !important;
   }
 }

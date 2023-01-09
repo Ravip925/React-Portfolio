@@ -4,11 +4,12 @@ import {
   Instagram,
   MailOutline,
   Phone,
-  Pinterest,
   Room,
   Twitter,
 } from "@mui/icons-material";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { mobile } from "../Responsive";
 import Loader from "./Loader";
 
 const Container = styled.div`
@@ -20,6 +21,7 @@ const Container = styled.div`
   position: relative;
   z-index: 5;
   overflow: hidden;
+  ${mobile({ flexDirection: "column", padding: "1.5rem 1rem" })}
 `;
 const Left = styled.div`
   flex: 1.5;
@@ -46,8 +48,8 @@ const SocialIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 20px;
   cursor: pointer;
+  margin: 0 10px;
 `;
 
 const Center = styled.div`
@@ -63,6 +65,16 @@ const List = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+
+  a {
+    display: block;
+    width: 50%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    &:active {
+      color: #bc0000;
+    }
+  }
 `;
 const ListItem = styled.li`
   width: 50%;
@@ -97,13 +109,21 @@ const Footer = () => {
       <Center>
         <Title>Links</Title>
         <List>
-          <ListItem>Home</ListItem>
-          <ListItem>Timeline</ListItem>
-          <ListItem>About</ListItem>
-          <ListItem>Resume</ListItem>
-          <ListItem>People</ListItem>
-          <ListItem>Projects</ListItem>
-          <ListItem>Contact Me</ListItem>
+          <NavLink to="/">
+            <ListItem>Home</ListItem>
+          </NavLink>
+          <NavLink to="/about">
+            <ListItem>About</ListItem>
+          </NavLink>
+          <NavLink to="/resume">
+            <ListItem>Resume</ListItem>
+          </NavLink>
+          <NavLink to="/projects">
+            <ListItem>Projects</ListItem>
+          </NavLink>
+          <NavLink to="/contact">
+            <ListItem>Contact</ListItem>
+          </NavLink>
         </List>
         <SocialContainer>
           <SocialIcon>
@@ -136,14 +156,6 @@ const Footer = () => {
               href="https://github.com/Ravip925"
             >
               <GitHub />
-            </a>
-          </SocialIcon>
-          <SocialIcon>
-            <a
-              style={{ textDecoration: "none", color: "inherit" }}
-              href="https://in.pinterest.com/"
-            >
-              <Pinterest />
             </a>
           </SocialIcon>
         </SocialContainer>

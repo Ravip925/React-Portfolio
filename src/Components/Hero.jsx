@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import "../app.sass";
+import { mobile } from "../Responsive";
 
 const HeroContainer = styled.div`
   width: 100%;
@@ -10,6 +11,16 @@ const HeroContainer = styled.div`
   overflow: hidden;
   display: flex;
   align-items: center;
+
+  ${mobile({
+    height: "350px",
+  })}
+
+  #stars,#stars2,#stars3 {
+    ${mobile({
+      display: "none",
+    })}
+  }
 `;
 const TextContainer = styled.div`
   display: flex;
@@ -18,6 +29,7 @@ const TextContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 25px;
+  ${mobile({ height: "25vh", padding: "0 10%", gap: "5px" })}
 
   h1 {
     width: 100%;
@@ -37,6 +49,14 @@ const TextContainer = styled.div`
     overflow: hidden;
     animation: animated-text__1 5s steps(40, end) 1s 1 normal both,
       animated-cursor__1 900ms steps(40, end) 7;
+
+    ${mobile({
+      fontSize: "1.2rem",
+      width: "auto",
+      letterSpacing: "0",
+      paddingBottom: "0",
+      animation: "none",
+    })}
 
     @keyframes animated-text__1 {
       from {
@@ -71,6 +91,13 @@ const TextContainer = styled.div`
       animated-cursor__2 900ms steps(30, end) 6;
     animation-delay: 7s;
 
+    ${mobile({
+      fontSize: "1.2rem",
+      width: "auto",
+      letterSpacing: "0",
+      animation: "none",
+    })}
+
     @keyframes animated-text__2 {
       from {
         width: 0;
@@ -94,12 +121,20 @@ const TextContainer = styled.div`
     font-weight: 500;
     text-align: center;
     letter-spacing: 3px;
-
     white-space: nowrap;
     overflow: hidden;
     animation: animated-text__3 5s steps(30, end) 1s 1 normal both,
       animated-cursor__3 900ms steps(30, end) infinite;
     animation-delay: 13s;
+
+    ${mobile({
+      fontSize: "0.6rem",
+      width: "100%",
+      letterSpacing: "0",
+      marginTop: "15px",
+      animation: "none",
+      overflow: "visible",
+    })}
 
     @keyframes animated-text__3 {
       from {

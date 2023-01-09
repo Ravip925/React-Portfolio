@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const PeopleWrapper = styled.section`
   padding: 4rem;
-  background-color: ${props => props.theme.primaryColor};
+  background-color: ${(props) => props.theme.primaryColor};
   color: white;
 
   h2 {

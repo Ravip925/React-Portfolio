@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile } from "../Responsive";
 import DownloadButton from "./DownloadButton";
 
 const Container = styled.div`
@@ -9,6 +10,9 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  ${mobile({
+    height: "160vh",
+  })}
 `;
 const ResumeWrapper = styled.div`
   width: 100%;
@@ -31,6 +35,12 @@ const ContentBox = styled.div`
     inset 0 0 20px rgba(255, 255, 255, 0), 7px 7px 15px rgba(55, 84, 170, 0.15),
     -7px -7px 20px rgba(255, 255, 255, 1),
     inset 0px 0px 4px rgba(255, 255, 255, 0.2);
+
+  ${mobile({
+    flexDirection: "column",
+    height: "140vh",
+    width: "90%",
+  })}
 `;
 
 const Left = styled.div`
@@ -39,6 +49,9 @@ const Left = styled.div`
   flex: 1;
   overflow: hidden;
 
+  ${mobile({
+    flex: "0.4",
+  })}
   img {
     width: 100%;
     height: 100%;
@@ -84,6 +97,10 @@ const Right = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+
+    ${mobile({
+      marginTop: "15px",
+    })}
   }
 `;
 const TextContainer = styled.div`
@@ -94,6 +111,10 @@ const TextContainer = styled.div`
   display: flex;
   gap: 3%;
   flex-direction: column;
+
+  ${mobile({
+    marginTop: "20px",
+  })}
 `;
 const TextBox = styled.div`
   width: 100%;
@@ -102,7 +123,7 @@ const TextBox = styled.div`
   div {
     position: relative;
     div {
-      margin:20px 0 0 40px;
+      margin: 20px 0 0 40px;
     }
     .p1,
     .p2 {
@@ -248,7 +269,7 @@ const MyResume = () => {
                   <span id="span3"></span>
                 </div>
               </TextBox>
-              <DownloadButton/>
+              <DownloadButton />
             </TextContainer>
           </Right>
         </ContentBox>

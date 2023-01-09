@@ -2,10 +2,9 @@ import { useState } from "react";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import "./Bar.css";
 import { NavLink } from "react-router-dom";
-import audio from '../assets/sounds/click.wav'
+import audio from "../assets/sounds/click.wav";
 
 const Bar = () => {
-  
   const [toggle, setToggle] = useState(true);
   const [isSideNavShown, setIsSideNavShown] = useState(false);
 
@@ -36,11 +35,9 @@ const Bar = () => {
             <NavLink to="/projects">My Projects</NavLink>
           </li>
           <li className="shape-circle circle-four">
-          <NavLink to='/contact'>Contact Me</NavLink>
+            <NavLink to="/contact">Contact Me</NavLink>
           </li>
-          <li className="shape-circle circle-five">
-          
-          </li>
+          <li className="shape-circle circle-five"></li>
         </ul>
       </nav>
     </>

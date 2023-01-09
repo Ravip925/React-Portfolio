@@ -1,5 +1,5 @@
 @import '../node_modules/compass-mixins/lib/compass'
-
+$small: 425px
 // n is number of stars required
 @function multiple-box-shadow ($n)
   $value: '#{random(2000)}px #{random(2000)}px #FFF'
@@ -69,3 +69,4 @@ $shadows-big: multiple-box-shadow(100)
     transform: translateY(0px)
   to
     transform: translateY(-2000px)
+

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { mobile } from "../Responsive";
 
 const Container = styled.div`
   height: 10vh;
@@ -9,6 +10,9 @@ const Container = styled.div`
   justify-content: center;
   padding: 0;
   text-align: center;
+  ${mobile({
+    marginTop: "25px",
+  })}
 `;
 const Wrapper = styled.div`
   position: relative;
@@ -116,12 +120,12 @@ const DownloadButton = () => {
   };
 
   const handleClick = () => {
-    if(click){
-        downloadRes();
-      }
+    if (click) {
+      downloadRes();
+    }
     setClick(false);
   };
-  
+
   return (
     <Container>
       <Wrapper onClick={handleClick}>
